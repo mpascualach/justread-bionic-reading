@@ -1,0 +1,15 @@
+.body {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 50px;
+    color: #504e4e;
+}
+
+a strong {
+    color: inherit;
+}
+
+strong {
+    font-size: 17px;
+    color: black;
+}
