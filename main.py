@@ -44,20 +44,18 @@ with open('output.html', 'w') as file:
 
         # Wrap non-empty paragraph contents in <p> tags
         paragraph_text = ''.join(str(content) for content in paragraph_contents if str(content).strip())
-        if paragraph == paragraph[1]:
-            print(paragraph)
             
-        if paragraph_text:
-            bolded_paragraph = ''
-            for word in paragraph_text.split():
-                if word.startswith('<a'):
-                    bolded_paragraph += f'{word} '
-                else:
-                    bolded_word = add_bold_to_words(word, 0.5)
-                    bolded_paragraph += f'{bolded_word} '
+        # if paragraph_text:
+        #     bolded_paragraph = ''
+        #     for word in paragraph_text.split():
+        #         if word.startswith('<a'):
+        #             bolded_paragraph += f'{word} '
+        #         else:
+        #             bolded_word = add_bold_to_words(word, 0.5)
+        #             bolded_paragraph += f'{bolded_word} '
 
-            wrapped_paragraph = f'<p>{bolded_paragraph.strip()}</p>\n'
-            file.write(wrapped_paragraph)
+        wrapped_paragraph = f'<p>{paragraph_text.strip()}</p>\n'
+        file.write(wrapped_paragraph)
 
     file.write('<br>\n')
 
