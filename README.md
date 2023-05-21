@@ -12,9 +12,15 @@ This Python application is designed to extract text from a web article and displ
 
 1. Clone the repository to your local machine:
 
+`git clone https://github.com/your-username/web-article-text-extractor.git`
+
 2. Navigate to the project directory:
 
+`cd web-article-text-extractor`
+
 3. Install the required dependencies using pip:
+
+`pip install -r requirements.txt`
 
 ## Usage
 
