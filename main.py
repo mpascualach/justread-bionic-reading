@@ -24,6 +24,7 @@ response = requests.get(url)
 
 soup = BeautifulSoup(response.content, 'html.parser')
 
+headers = soup.find_all('h1')
 paragraphs = soup.find_all('p')
 
 # Extract the link to the original article
@@ -37,6 +38,10 @@ with open('output.html', 'w') as file:
 
     # Write the link to the original article
     file.write(f'<p><a href="{original_article_link}" target="_blank">Read the Original Article</a></p>\n')
+
+    for header in headers:
+        header_contents = header.contents
+        print(header)
 
     for paragraph in paragraphs:
         # Get the contents of the paragraph

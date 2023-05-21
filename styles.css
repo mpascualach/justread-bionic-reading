@@ -3,6 +3,7 @@
     margin: 0 auto;
     margin-top: 50px;
     color: #504e4e;
+    font-size: 24px;
 }
 
 a strong {
@@ -10,6 +11,6 @@ a strong {
 }
 
 strong {
-    font-size: 17px;
+    font-size: 23px;
     color: black;
 }
