@@ -4,6 +4,7 @@ from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
 from output_builder import build_output
+from url_getter import get_url
 
 url = 'https://www.theguardian.com/world/2023/may/18/italy-worst-flooding-in-100-years-emilia-romagna'
 # prompt user for url?
@@ -29,5 +30,6 @@ def main():
     observer.join()
 
 if __name__ == "__main__":
-    build_output(url)
+    url_article = get_url()
+    build_output(url_article)
     main()
