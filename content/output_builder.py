@@ -5,7 +5,6 @@ import os
 from message_handler import start_server
 
 def build_output(url):
-    print("Building output")
     response = requests.get(url)
 
     soup = BeautifulSoup(response.content, 'html.parser')
