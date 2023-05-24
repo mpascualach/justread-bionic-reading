@@ -2,7 +2,11 @@ import requests
 from bs4 import BeautifulSoup
 import webbrowser
 import os
+from flask import Flask, render_template, request
+import validators
 from message_handler import start_server
+
+app = Flask(__name__)
 
 def build_output(url):
     response = requests.get(url)
@@ -52,3 +56,6 @@ def build_output(url):
     webbrowser.open('file://' + os.path.realpath(output_file_path), new=2)
 
     start_server()
+
+if __name__ == '__main__':
+    app.run()

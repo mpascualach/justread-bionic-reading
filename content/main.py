@@ -30,6 +30,6 @@ def main():
     observer.join()
 
 if __name__ == "__main__":
-    url_article = get_url()
-    build_output(url_article)
+    # url_article = get_url()
+    build_output()
     main()
