@@ -18,10 +18,12 @@ def build_output(url):
 
     original_article_link = soup.find('link', rel='canonical')['href']
 
+    title = 'Article'
+
     with open('output.html', 'w') as file:
-        file.write('<html>\n<head>\n<title>Output</title>\n')
+        file.write('<html>\n<head>\n<title>{title}</title>\n')
         file.write('<link rel="stylesheet" type="text/css" href="styles.css">\n')
-        file.write('<script src="handler.js"></script>')
+        file.write('<script src="js/handler.js"></script>')
         file.write('</head>\n<body>\n')
         file.write('<div class="body">\n')
 
@@ -29,6 +31,9 @@ def build_output(url):
             header_contents = header.contents
 
             header_text = ''.join(str(content) for content in header_contents if str(content).strip())
+
+            title = header_text
+            
             wrapped_header = f'<h1>{header_text}</h1>\n'
             file.write(wrapped_header)
 
