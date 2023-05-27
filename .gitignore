@@ -1,3 +1,5 @@
 /venv
 
 /to-do
+
+/content/__pycache__
