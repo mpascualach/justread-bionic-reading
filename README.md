@@ -28,6 +28,8 @@ This Python application is designed to extract text from a web article and displ
 
 2. Run the `main.py` file:
 
+`python content/main.py`
+
 3. Enter the URL of the web article you want to extract text from when prompted.
 
 4. The application will extract the text and display it on a blank page in the terminal.
