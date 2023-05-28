@@ -3,7 +3,6 @@ from bs4 import BeautifulSoup
 import html
 import webbrowser
 import os
-from main_title_getter import get_main_title
 
 def fetch_article_content(url):
     response = requests.get(url)
